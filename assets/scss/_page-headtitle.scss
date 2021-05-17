@@ -1,0 +1,65 @@
+.general-page-title {
+    color: $primary-color;
+    text-align: center;
+    width: 100%;
+    padding: 100px 0;
+    position: relative;
+    @include media(0,600px){
+        padding: 100px 0 40px 0;
+    }
+    .general-page-breadcrumb {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding-top: 20px;
+        li {
+            display: inline;
+            color: $fourth-color;
+            text-transform: uppercase;
+            font-family: $primary-font;
+            @include media(0,600px){
+                display: none;
+            }
+            a {
+                color: $primary-color;
+            }
+        }
+        li:nth-child(n+2)::before{
+            content: " / ";
+            color: $primary-color;
+        }
+    }
+    h1 {
+        text-transform: uppercase;
+        font-family: $primary-font;
+        font-size: 36px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        line-height: 44px;
+        @include media(0,600px){
+            font-size: 24px;
+            line-height: 36px;
+        }
+    }
+    p {
+        font-size: 20px;
+        letter-spacing: 1px;
+        font-style: italic;
+        color: $secondary-color;
+        padding-top: 22px;
+        font-family: $secondary-font;
+        @include media(0,900px){
+            line-height: 24px;
+            font-size: 18px;
+        }
+        @include media(0,600px){
+            font-size: 16px;
+        }
+    }
+}
+.general-page-title {
+    h1 > span {
+        font-weight: 400;
+        color: $secondary-color;
+    } 
+}

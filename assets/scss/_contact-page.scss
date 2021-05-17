@@ -1,0 +1,139 @@
+.contact-form {
+    .contact-form-container {
+        width: 60%;
+        margin: 0 auto;
+        text-align: left;
+        font-family: $primary-font;
+        color: $secondary-color;
+        @include media(0,900px) {
+            width: 80%;
+        } 
+        form label {
+            text-transform: uppercase;
+            display: block;
+            padding-bottom: 10px;  
+        }
+        .form-item {
+            margin-bottom: 50px;
+            position: relative;
+            select {
+                width:100%;
+                height: 50px;
+                border: 1px solid $third-color;
+                padding: 10px 10px;
+                color: $secondary-color;
+                &:focus {
+                    outline: none;
+                }
+            }
+            input {
+                width:100%;
+                height: 50px;
+                border: 1px solid $third-color;
+                padding: 10px 10px;
+                color: $secondary-color;
+                &:focus {
+                    outline: none;
+                }
+            }
+            input:-webkit-autofill {
+                &,
+                &:hover,
+                &:focus,
+                &:active {
+                    transition: background-color 5000s ease-in-out 0s;
+                    -webkit-text-fill-color: $secondary-color;
+                }
+            } 
+            textarea {
+                width: 100%;
+                height: 250px;
+                border: 1px solid $third-color;
+                padding: 10px 10px;
+                color: $secondary-color;
+                &:focus {
+                    outline: none;
+                }
+            } 
+            .error {
+                color: $fourth-color;
+                font-size: 14px;
+                padding-top: 5px;
+                position: absolute;
+            }
+        }
+        .form-doublecolumn {
+            text-align: justify;
+            &::after {
+                content: "";
+                display: inline-block;
+                width: 100%;
+                height: 0;
+            }    
+            .form-left {
+                display: inline-block;
+                width: 48%; 
+                @include media(0,600px) {
+                    display: block;
+                    width: 100%;
+                }   
+            }
+            .form-right {
+                display: inline-block;
+                width: 48%;
+                @include media(0,600px) {
+                    display: block;
+                    width: 100%;
+                }  
+            }
+        }
+        .form-button {
+            text-align: center;
+            input[type=submit] {
+                width: 25%;
+                min-width: 100px;
+                height: 50px;
+                background-color: $fourth-color;
+                border: 1px solid $fourth-color;
+                color: $fifth-color;
+                font-family: $primary-font;
+                text-transform: uppercase;
+                padding: 10px 15px;
+                cursor: pointer;
+                font-size: 16px;
+                &:hover {
+                    background-color: rgb(182, 88, 103);
+                    border: 1px solid rgb(182, 88, 103);
+                }
+                &:focus {
+                    outline: none;
+                }
+            }
+        }
+        .popup-modal {
+            position: fixed;
+            display: none;
+            text-align: center;
+            z-index: 30;
+            left: 33.33%;
+            top: 40%;
+            width: 33.33%;
+            background-color: $fourth-color;
+            .close-modal {
+                color: $fifth-color;
+                font-size: 28px;
+                font-weight: bold;
+                position: absolute;
+                top: 0;
+                right: 0;
+                padding-right: 5px;
+                cursor: pointer;
+            }
+            p {
+                color: $fifth-color;
+                padding: 15px 25px;
+                font-size: 18px;
+            }
+        }
+    }
+}

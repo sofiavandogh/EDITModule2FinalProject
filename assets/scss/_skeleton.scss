@@ -1,0 +1,12 @@
+body {
+    background-color: $primary-color;
+}
+
+//Background white rectangle where the site content rests
+.page-container {
+    max-width: 1280px;
+    width: 100%;
+    background-color: $fifth-color;
+    margin: 30px auto;
+    padding: 30px;
+}

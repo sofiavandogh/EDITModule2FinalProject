@@ -1,0 +1,57 @@
+.navbar {
+    background-color: $fifth-color!important;
+    border-bottom: 0.5px solid $third-color;
+    height: 100px;
+    .container-fluid {
+        padding-left: 0;
+        padding-right: 0;
+        font-family: $primary-font;
+        font-size: 14px;
+        letter-spacing: 1px;
+        background-color: white;
+        img {
+            width: 42px;
+            height: 42px;
+        }
+        .navbar-toggler:focus {
+            box-shadow: 0 0 5px;
+        }
+        .nav-item a {
+            color: $primary-color;
+            padding: 0 0 0 25px;
+            @include media(0,991px){
+                padding: 15px 0 10px 0;
+                text-align: center;
+            }
+        }
+        .nav-item:hover a {
+            color: $fourth-color;
+            transition: color 0.5s;      
+        }
+        .icon-shopping_basket:before { 
+            padding-right: 5px;
+        }
+        .icon-user:before {
+            padding-right: 5px;
+        }
+        .icon-search:before {
+            border: 1px solid gray;
+            font-size: 17px;
+            padding: 14px;
+            @include media(0,991px){
+                border: none;
+                padding: 0;
+            }
+        }
+        .icon-search:hover {
+            background-color: gray;
+            color: white;
+            font-size: 17px;
+            padding: 14px 0; 
+            @include media(0,991px){
+                background-color: white;
+                color: $fourth-color;
+            }
+        }
+    }
+}

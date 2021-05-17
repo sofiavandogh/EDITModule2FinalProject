@@ -1,0 +1,29 @@
+.search-results {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 40px 0 100px 0;
+    .search-result-item {
+        margin: 0 auto;
+        .search-result-image {
+            position: relative; 
+            &::after {
+                content: "";
+                @include imagelayer;
+            }
+            a img {
+                border: 0.5px solid $third-color;
+                width: 100%;
+            }
+        }
+        .search-result-text {
+            color: $primary-color;
+            font-family: $primary-font;
+            font-size: 14px;
+            font-weight: 700;
+            text-align: center;
+            line-height: 20px;
+            padding: 0px 0 20px 0;
+        }
+    }
+}

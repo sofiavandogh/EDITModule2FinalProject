@@ -1,0 +1,88 @@
+.signup {
+    width: 100%;
+    margin: 150px 0;
+    .signup-content {
+        width: 90%;
+        margin: 0 auto;
+        text-align: center;
+        h3 {
+            font-size: 36px;
+            letter-spacing: 2px;
+            line-height: 35px;
+            color: $primary-color;
+            font-weight: 700;
+            font-family: $primary-font;
+            text-transform: uppercase;
+            @include media(0,900px) {
+                font-size: 24px;
+            }      
+        }
+        p {
+            font-size: 18px;
+            letter-spacing: 1px;
+            line-height: 24px;
+            color: $secondary-color;
+            font-style: italic;
+            font-family: $secondary-font;
+            padding-top: 20px;
+            @include media(0,600px) {
+                font-size: 14px;
+            }  
+        }
+        form {
+            margin-top: 60px;
+            display: flex;
+            justify-content: center;
+            font-family: $primary-font;
+            input[type=email] {
+                height: 60px;
+                width: 50%;
+                border: 1px solid $secondary-color;
+                border-right: 0px;
+                color: $secondary-color;
+                padding-left: 10px;
+                @include media(0,900px) {
+                    width: 60%;
+                }      
+                @include media(0,600px) {
+                    width: 80%;
+                    height: 45px;
+                    font-size: 14px;
+                }  
+            }
+            input[type=email]:focus {
+                outline: none;
+            }
+            input[type=email]:-webkit-autofill {
+                &,
+                &:hover,
+                &:focus,
+                &:active {
+                    transition: background-color 5000s ease-in-out 0s;
+                    -webkit-text-fill-color: $secondary-color;
+                }
+            } 
+            input[type=submit] {
+                height: 60px;
+                width: 80px;
+                background-color: $fourth-color;
+                border: 1px solid $fourth-color;
+                color: $fifth-color;
+                cursor: pointer;
+                font-size: 14px;
+                &:hover {
+                    background-color: rgb(182, 88, 103);
+                    border: 1px solid rgb(182, 88, 103);
+                }
+                &:focus {
+                    outline: none;
+                }
+                @include media(0,600px) {
+                    width: 50px;
+                    height: 45px;
+                    font-size: 14px;
+                }  
+            }
+        }    
+    }
+}

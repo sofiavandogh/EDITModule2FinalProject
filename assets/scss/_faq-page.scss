@@ -1,0 +1,85 @@
+.faq {
+    width: 80%;
+    margin: 40px auto 100px auto;
+    font-family: $primary-font;
+    color: $primary-color;
+    //Accordeon #1 using classes
+    .question {
+        font-weight: bold;
+        text-transform: uppercase;
+        padding: 20px 10px;
+        background-color: rgb(223, 215, 215);
+        margin-bottom: 20px;
+        position: relative;
+        font-size: 16px;
+        line-height: 20px;
+        &::after {
+            content:"\ea43";
+            font-family: "icomoon";
+            color: $fourth-color;
+            font-size: 20px;
+            font-weight: 400;
+            position: absolute;
+            right: 0;
+            padding-right: 15px;
+            @include media(0,600px) {
+               display: none;
+            }   
+        }
+        @include media(0,600px) {
+            font-size: 14px;
+            padding: 10px 10px;
+        }   
+    }
+    .answer {
+        display: none;
+        padding: 20px 10px;
+        line-height: 24px;
+        margin-bottom: 20px;
+        @include media(0,600px) {
+            font-size: 14px;
+            padding: 10px 10px;
+        }   
+    }
+    //Accordeon #2 using pseudo class nth-child
+    #faq-accordeon-nthchild {
+        ul {
+            position: relative;
+        }
+        ul :nth-child(even) {
+            display: none;
+            padding: 20px 10px;
+            line-height: 24px;
+            margin-bottom: 20px;
+            @include media(0,600px) {
+                font-size: 14px;
+                padding: 10px 10px;
+            }   
+        }
+        ul :nth-child(odd) {
+            font-weight: bold;
+            text-transform: uppercase;
+            padding: 20px 10px;
+            background-color: $third-color;
+            margin-bottom: 20px;
+            line-height: 20px;
+            &::after {
+                content:"\ea43";
+                font-family: "icomoon";
+                color: $fourth-color;
+                font-size: 20px;
+                font-weight: 400;
+                position: absolute;
+                right: 0;
+                padding-right: 15px;
+                @include media(0,600px) {
+                    display: none;
+                 }   
+            }
+            @include media(0,600px) {
+                font-size: 14px;
+                padding: 10px 10px;
+            }   
+        }
+    }
+}

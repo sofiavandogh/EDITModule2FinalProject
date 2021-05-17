@@ -1,0 +1,87 @@
+.hero {
+    width: 100%;
+    color: $primary-color;
+    background-color: $fifth-color;
+    position: relative;
+    .hero-content {
+        text-align: center;
+        width: 90%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        h1 {
+            text-transform: uppercase;
+            font-family: $primary-font;
+            font-size: 62px;
+            @include media(0,900px){
+                font-size: 42px;
+            }
+            @include media(0,600px){
+                font-size: 32px;
+            }
+        }
+        p {
+            font-size: 28px;
+            letter-spacing: 1px;
+            font-style: italic;
+            padding-top: 50px;
+            font-family: $secondary-font;
+            text-shadow: 2px 2px 1px $fifth-color;
+            @include media(0,900px){
+                font-size: 24px;
+                line-height: 28px;
+                padding-top: 25px;
+            }
+            @include media(0,600px){
+                font-size: 16px;
+                padding-top: 10px;
+                line-height: 18px;
+            }
+            @include media(0,448px){
+                display: none;
+            }
+        }
+        .btn {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-family: $primary-font;
+            text-align: center;
+            padding: 25px 50px;
+            background-color: $fifth-color;
+            border: 1px solid $fifth-color;
+            margin-top: 50px;
+            &:hover {
+                color: $fifth-color;       
+                background-color: $fourth-color;
+                border: 1px solid $fourth-color;
+                cursor: pointer;
+            }
+            &:focus {
+                visibility: hidden;
+            }
+            @include media(0,900px){
+                padding: 15px 25px;
+                margin-top: 40px;
+            }
+            @include media(0,600px){
+                padding: 5px 15px;
+                font-size: 10px;
+                margin-top: 25px;
+            }
+            @include media(0,448px){
+                font-size: 14px;
+                margin-top: 50px;
+                padding: 10px 15px;
+            }
+        }
+    }
+    .hero-container img {
+        width: 100%;
+        opacity: 0.8;
+        z-index: -2;
+    }
+}    
+
